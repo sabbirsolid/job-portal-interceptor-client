@@ -10,7 +10,7 @@ const MyApplications = () => {
 
   // useEffect(() => {
   //   axios
-  //     .get(`https://job-portal-server-for-recruiter-part3-six-inky.vercel.app/job-application?email=${user.email}`, {
+  //     .get(`http://localhost:5000/job-application?email=${user.email}`, {
   //       withCredentials:true
   //     })
   //     .then((res) => {

@@ -24,7 +24,7 @@ const SignIn = () => {
       .then((result) => {
         console.log("sign in", result.user.email);
         // const user = {email: email}
-        // axios.post('https://job-portal-server-for-recruiter-part3-six-inky.vercel.app/jwt',user,{
+        // axios.post('http://localhost:5000/jwt',user,{
         //     withCredentials: true
         // })
         // .then(res => {

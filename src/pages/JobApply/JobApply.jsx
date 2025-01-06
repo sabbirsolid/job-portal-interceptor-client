@@ -26,16 +26,13 @@ const JobApply = () => {
       resume,
     };
 
-    fetch(
-      "https://job-portal-server-for-recruiter-part3-six-inky.vercel.app/job-applications",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(jobApplication),
-      }
-    )
+    fetch("http://localhost:5000/job-applications", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(jobApplication),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

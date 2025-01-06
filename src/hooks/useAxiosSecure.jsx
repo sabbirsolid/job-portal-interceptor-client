@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import useAuth from "./useAuth";
+// import useAuth from "./useAuth";
 import AuthContext from "../context/AuthContext/AuthContext";
 
 const axiosInstance = axios.create({
-  baseURL: "https://job-portal-server-for-recruiter-part3-six-inky.vercel.app",
+  baseURL: "http://localhost:5000",
   withCredentials: true,
 });
 

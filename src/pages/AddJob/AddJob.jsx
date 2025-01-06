@@ -18,16 +18,13 @@ const AddJob = () => {
     newJob.responsibilities = newJob.responsibilities.split("\n");
     console.log(newJob);
 
-    fetch(
-      "https://job-portal-server-for-recruiter-part3-six-inky.vercel.app/jobs",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newJob),
-      }
-    )
+    fetch("http://localhost:5000/jobs", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newJob),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
